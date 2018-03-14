@@ -22,10 +22,13 @@ var genre = {
 const container = document.getElementById("questionOneImg");
 
 
+
 for (let i = 0; i < images.length; i++) {
 	
 	const imgContainer = document.createElement('div');
 	
+
+
 	const img = new Image();
 	img.src = images[i];
 	img.id = "img"+i;
