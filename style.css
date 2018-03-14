@@ -1,13 +1,23 @@
-#questionOneImg{
+*, html, body {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
 
-    display: grid;
-    grid-template-columns: repeat(2, 25%);
-    grid-column-gap: 20px;
+}
+body{
+	border:solid red;
+	text-align: center;
+
 }
 
+#questionOneImg{
+	border:solid green;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 10px;
+}
 .slide {
+	border:solid yellow;
+	width: 50%;
 
-    width: 100%;
-    padding-right: 20px;
-    padding-bottom: 20px;
 }

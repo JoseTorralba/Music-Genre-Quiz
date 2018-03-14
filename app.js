@@ -26,6 +26,8 @@ for (let i = 0; i < images.length; i++) {
 	
 	const imgContainer = document.createElement('div');
 	
+	// imgContainer.id="center";
+
 	const img = new Image();
 	img.src = images[i];
 	img.id = "img"+i;
