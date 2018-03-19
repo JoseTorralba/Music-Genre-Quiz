@@ -1,13 +1,19 @@
 body{
-	border:solid red;
 	text-align: center;
     font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 
 #questionOne,
 #questionTwo,
 #questionThree  {
-	border:solid green;
+/*	border:solid green;*/
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-column-gap: 10px;
@@ -19,13 +25,28 @@ body{
 }
 
 img {
-	border:solid yellow;
+/*	border:solid yellow;*/
 	width: 50%;
-    transition: opacity 0.3s;
+    transform: scale(1.03);
+    transition: transform 0.3s, opacity 0.4s;
 }
 
 img:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.7;
+    transform: scale(1.10);
 
 }
+
+/*
+p:after {
+    display: block;
+    height: 2px;
+    background-color: #E67E22;
+    content: " ";
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+*/
