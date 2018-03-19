@@ -1,6 +1,20 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-	text-align: center;
+    color: white;
+   	text-align: center;
     font-family: 'Montserrat', sans-serif;
+    background: url("img/bg.jpg") no-repeat fixed center center;
+    background-size: cover;
+}
+
+.bodyWrapper {
+    background-color: rgba(255,255,255,.2);
+    border: solid yellow;
 }
 
 h2 {
@@ -20,7 +34,7 @@ h2 {
 }
 
 #questionTwo,
-#questionThree {
+#questionThree,#questionFour,#questionFive{
     display: none;
 }
 
@@ -38,7 +52,7 @@ img:hover {
 
 }
 
-/*
+
 p:after {
     display: block;
     height: 2px;
@@ -49,4 +63,4 @@ p:after {
     margin-top: 4px;
     margin-bottom: 30px;
 }
-*/
+

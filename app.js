@@ -9,9 +9,14 @@ const images = [
     "img/metallica.jpg",
     "img/taylor-swift.jpg",
     "img/kanye-west.jpg",
-    "img/taylor-swift.jpg",
+    "img/lady-gaga.jpg",
     "img/bullet-for-my-valentine.jpg",
-    "img/katy-perry.jpg"
+    "img/katy-perry.jpg",
+    "img/kendrick-lamar.jpg",
+    "img/rhcp.jpg",
+    "img/bvb.jpg",
+    "img/justin-b.jpg"
+
 ];
 
 const artists = [
@@ -20,9 +25,13 @@ const artists = [
 	"Metallica",
 	"Taylor Swift",
 	"Kanye West",
-	"Taylor Swift",
+	"Lady Gaga",
 	"Bullet For My Valentine",
-	"Katy Perry"
+	"Katy Perry",
+    "kendrick lamar",
+    "Red Hot Chili Peppers",
+    "Black Veil Brides",
+    "Justin Bieber"
 ];
 
 var genre = {
@@ -82,6 +91,31 @@ for (let i = 4; i < 8; i++) {
     questionTwo.appendChild(imgContainer2);
 };
 
+const container3 = document.getElementById("questionThree");
+
+for (let i = 8; i < 12; i++) {
+
+    images[i];
+
+    const imgContainer3 = document.createElement('div');
+    const img = new Image();
+    img.src = images[i];
+    img.id = "img" + i;
+    img.classList.add("artist-image-3");
+
+    imgContainer3.appendChild(img);
+
+    const artistName = document.createElement('p');
+    artistName.classList.add("caption");
+    artistName.textContent = artists[i];
+    imgContainer3.append(artistName);
+
+    questionThree.appendChild(imgContainer3);
+};
+
+
+
+
 
 // Continues Quiz & Keeps Score
 
@@ -127,7 +161,7 @@ window.onload = function () {
         console.log(genre);
 
         document.getElementById('questionTwo').style.display = "none";
-        document.getElementById('questionTwo').style.display = "grid";
+        document.getElementById('questionThree').style.display = "grid";
     };
 
     document.getElementById("img5").onclick = function () {
@@ -135,7 +169,7 @@ window.onload = function () {
         console.log(genre);
 
         document.getElementById('questionTwo').style.display = "none";
-        document.getElementById('questionTwo').style.display = "grid";
+        document.getElementById('questionThree').style.display = "grid";
     };
 
     document.getElementById("img6").onclick = function () {
@@ -143,7 +177,7 @@ window.onload = function () {
         console.log(genre);
 
         document.getElementById('questionTwo').style.display = "none";
-        document.getElementById('questionTwo').style.display = "grid";
+        document.getElementById('questionThree').style.display = "grid";
     };
 
     document.getElementById("img7").onclick = function () {
@@ -151,6 +185,6 @@ window.onload = function () {
         console.log(genre);
 
         document.getElementById('questionTwo').style.display = "none";
-        document.getElementById('questionTwo').style.display = "grid";
+        document.getElementById('questionThree').style.display = "grid";
     };
 };
