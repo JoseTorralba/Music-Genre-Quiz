@@ -1,33 +1,52 @@
+/*
 *, html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+*/
 
 body{
     color: white;
    	text-align: center;
     font-family: 'Montserrat', sans-serif;
-    background: url("img/bg.jpg") no-repeat fixed center center;
-    background-size: cover;
+    background-image: url("img/bg.jpg"), 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background-blend-mode: multiply;
+    height: 100vh;
 }
 
-.bodyWrapper {
-    background-color: rgba(255,255,255,.2);
-    border: solid yellow;
+h1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
 }
 
-h2 {
+h2 { font-size: 1.3em; }
+
+a {
+    text-decoration: none;
+    color: #e67e22;
+    transition: color 0.5s;
+}
+
+a:hover { color: #fdae66; }
+
+h3 {
+    width: 50%;
+    margin: 0 auto;
     margin-bottom: 2em;
     text-transform: uppercase;
+    font-size: 1.2em;
     font-weight: 100;
     letter-spacing: 2px;
 }
 
+
 #questionOne,
 #questionTwo,
 #questionThree  {
-/*	border:solid green;*/
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-column-gap: 10px;
@@ -39,8 +58,7 @@ h2 {
 }
 
 img {
-/*	border:solid yellow;*/
-	width: 50%;
+	width: 45%;
     transform: scale(1.03);
     transition: transform 0.3s, opacity 0.4s;
 }
@@ -49,14 +67,12 @@ img:hover {
     cursor: pointer;
     opacity: 0.7;
     transform: scale(1.10);
-
 }
-
 
 p:after {
     display: block;
     height: 2px;
-    background-color: #E67E22;
+    background-color: #e67e22;
     content: " ";
     width: 60px;
     margin: 0 auto;

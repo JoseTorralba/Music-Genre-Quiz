@@ -28,7 +28,7 @@ const artists = [
 	"Lady Gaga",
 	"Bullet For My Valentine",
 	"Katy Perry",
-    "kendrick lamar",
+    "Kendrick Lamar",
     "Red Hot Chili Peppers",
     "Black Veil Brides",
     "Justin Bieber"
