@@ -73,7 +73,6 @@ for (let i = 0; i < 4; i++) {
     questionOne.appendChild(imgContainer);
 };
 
-
 // QUESTION 2
 const container2 = document.getElementById("questionTwo");
 
@@ -83,7 +82,6 @@ for (let i = 4; i < 8; i++) {
     const img = new Image();
     img.src = images[i];
     img.id = "img" + i;
-
 
     imgContainer2.appendChild(img);
 
@@ -104,7 +102,6 @@ for (let i = 8; i < 12; i++) {
     img.src = images[i];
     img.id = "img" + i;
 
-
     imgContainer3.appendChild(img);
 
     const artistName = document.createElement('p');
@@ -123,7 +120,6 @@ for (let i = 12; i < 16; i++) {
     const img = new Image();
     img.src = images[i];
     img.id = "img" + i;
-
 
     imgContainer4.appendChild(img);
 
@@ -144,7 +140,6 @@ for (let i = 16; i < 20; i++) {
     img.src = images[i];
     img.id = "img" + i;
 
-
     imgContainer5.appendChild(img);
 
     const artistName = document.createElement('p');
@@ -157,16 +152,17 @@ for (let i = 16; i < 20; i++) {
 // ANSWER DIV
 const containerAns = document.getElementById('answer');
 const message = document.createElement('article');
+const message2 = document.createElement('article');
+const message3 = document.createElement('article');
+const message4 = document.createElement('article');
 
-// Continues Quiz & Keeps Score
-
-// FIRST SET OF IMAGES
+// KEEPS SCORE & MOVES ON TO NEXT QUESTIONS
+// QUESTION 1 IMAGES
 document.getElementById("img0").onclick = function () {
     score.rap++;
     console.log(score);
 
     document.getElementById('questionOne').style.display = "none";
-
     document.getElementById('questionTwo').style.display = "grid";
 };
 
@@ -194,8 +190,7 @@ document.getElementById("img3").onclick = function () {
     document.getElementById('questionTwo').style.display = "grid";
 };
 
-
-// SECOND SET OF IMAGES
+// QUESTION 2 IMAGES
 document.getElementById("img4").onclick = function () {
     score.rap++;
     console.log(score);
@@ -228,7 +223,7 @@ document.getElementById("img7").onclick = function () {
     document.getElementById('questionThree').style.display = "grid";
 };
 
-// THIRD SET OF IMAGES
+// QUESTION 3 IMAGES
 document.getElementById("img8").onclick = function () {
     score.rap++;
     console.log(score);
@@ -261,7 +256,7 @@ document.getElementById("img11").onclick = function () {
     document.getElementById('questionFour').style.display = "grid";
 };
 
-// FOURTH SET OF IMAGES
+// QUESTION 4 IMAGES
 document.getElementById("img12").onclick = function () {
     score.rap++;
     console.log(score);
@@ -294,18 +289,31 @@ document.getElementById("img15").onclick = function () {
     document.getElementById('questionFive').style.display = "grid";
 };
 
-// FIFTH SET OF IMAGES
+// QUESTION 5 IMAGES WITH ANSWERS
 document.getElementById("img16").onclick = function () {
     score.rap++;
     console.log(score);
     document.getElementById('questionFive').style.display = "none";
     document.getElementById('answer').style.display = "block";
     answer.appendChild(message);
+    answer.appendChild(message2);
+    answer.appendChild(message3);
+    answer.appendChild(message4);
 
-    if (score.rap >= 3) {
+    if (score.rap >= 1) {
+        message.textContent = "You enjoy listening to rap music";
+    } 
+    
+    if (score.alt >= 1) {
+        message2.textContent = "and a bit of alt";
+    }
 
-        message.textContent = "You enjoy rap music";
+    if (score.metal >= 1) {
+        message3.textContent = "and a bit of metal";
+    }
 
+    if (score.pop >= 1) {
+        message4.textContent = "and a bit of pop";
     }
 };
 
@@ -316,11 +324,25 @@ document.getElementById("img17").onclick = function () {
     document.getElementById('questionFive').style.display = "none";
     document.getElementById('answer').style.display = "block";
     answer.appendChild(message);
+    answer.appendChild(message2);
+    answer.appendChild(message3);
+    answer.appendChild(message4);
 
-    if (score.alt >= 3) {
+    if (score.alt >= 1) {
+        message.textContent = "You enjoy listening to alternative music.";
+    }
 
-        message.textContent = "You enjoy alternative music.";
+    if (score.rap >= 1) {
+        message2.textContent = "and a bit of rap";
+    } 
+    
 
+    if (score.metal >= 1) {
+        message3.textContent = "and a bit of metal";
+    }
+
+    if (score.pop >= 1) {
+        message4.textContent = "and a bit of pop";
     }
 };
 
@@ -331,24 +353,51 @@ document.getElementById("img18").onclick = function () {
     document.getElementById('questionFive').style.display = "none";
     document.getElementById('answer').style.display = "block";
     answer.appendChild(message);
+    answer.appendChild(message2);
+    answer.appendChild(message3);
+    answer.appendChild(message4);
 
-    if (score.metal >= 3) {
+    if (score.metal >= 1) {
+        message.textContent = "You enjoy listening to metal music.";
+    }
 
-        message.textContent = "You enjoy metal music.";
+    if (score.rap >= 1) {
+        message2.textContent = "and a bit of rap";
+    } 
+    
+    if (score.alt >= 1) {
+        message3.textContent = "and a bit of alt";
+    }
 
+    if (score.pop >= 1) {
+        message4.textContent = "and a bit of pop";
     }
 };
 
 document.getElementById("img19").onclick = function () {
     score.pop++;
     console.log(score);
+
     document.getElementById('questionFive').style.display = "none";
     document.getElementById('answer').style.display = "block";
     answer.appendChild(message);
+    answer.appendChild(message2);
+    answer.appendChild(message3);
+    answer.appendChild(message4);
 
-    if (score.pop >= 3) {
+    if (score.pop >= 1) {
+        message.textContent = "You enjoy listening to pop music.";
+    } 
 
-        message.textContent = "You enjoy pop music.";
+    if (score.rap >= 1) {
+        message2.textContent = "and a bit of rap";
+    } 
+    
+    if (score.alt >= 1) {
+        message3.textContent = "and a bit of alt";
+    }
 
+    if (score.metal >= 1) {
+        message4.textContent = "and a bit of metal";
     }
 };

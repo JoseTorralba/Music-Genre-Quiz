@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     color: white;
    	text-align: center;
@@ -9,6 +10,7 @@ body {
     height: 100vh;
 }
 
+/* Headers & Link*/
 h1 {
     text-transform: uppercase;
     font-weight: 100;
@@ -35,6 +37,7 @@ h3 {
     letter-spacing: 2px;
 }
 
+/* Aligns Images */
 #answer,
 #questionOne,
 #questionTwo,
@@ -45,16 +48,21 @@ h3 {
     grid-template-columns: repeat(2, 50%);
     grid-column-gap: 10px;
 }
+
+/* Hides Images & Answer*/
 #answer,
 #questionTwo,
 #questionThree,
 #questionFour,
 #questionFive { display: none; }
 
+/* Styles for Answer Text*/
 #answer {
-    border: solid pink;
-    font-size: 3em;
-
+    font-size: 2em;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    margin-top: 75px;
+    text-transform: uppercase;
 }
 
 img {
@@ -69,6 +77,7 @@ img:hover {
     transform: scale(1.10);
 }
 
+/* Orange Underline */
 p:after {
     display: block;
     height: 2px;
